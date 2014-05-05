@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    tools:ignore="MergeRootFrame" >
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:id="@+id/next"
+        android:layout_below="@+id/viewFlipper"
+        android:layout_alignRight="@+id/viewFlipper"
+        android:layout_marginTop="10dp" />
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/regBar"
+        android:indeterminate="false"
+        android:layout_marginTop="180dp"
+        android:layout_below="@+id/next"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/regTitle"
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="45dp"
+        android:textSize="18pt"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Large Text"
+        android:id="@+id/subTitle"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="45dp"
+        android:textSize="8pt"
+        android:textColor="#A0A0A0" />
+
+    <ViewFlipper
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewFlipper"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true">
+
+
+        <LinearLayout
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="40dp">
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="Full name i.e. John doe"
+                android:ems="10"
+                android:id="@+id/name"
+                android:selectAllOnFocus="false" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="40dp">
+                <EditText
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="i.e.johndoe@email.com"
+                    android:ems="10"
+                    android:id="@+id/email" />
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="40dp">
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="i.e. Charles345"
+                android:ems="10"
+                android:id="@+id/password" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="40dp">
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="Confirm your password"
+                android:ems="10"
+                android:id="@+id/conf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="150dp"
+            android:layout_marginLeft="40dp">
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:hint="i.e. Howard Univerisity"
+                android:ems="10"
+                android:id="@+id/school" />
+        </LinearLayout>
+
+    </ViewFlipper>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Steps Status Bar"
+        android:id="@+id/rptext"
+        android:layout_alignBottom="@+id/regBar"
+        android:layout_marginBottom="30dp"
+        android:layout_alignRight="@+id/next"
+        android:textColor="#C0C0C0" />
+
+    <CheckBox
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:text='Accept "Our terms of agreement"'
+        android:id="@+id/atoa"
+        android:checked="false"
+        android:layout_below="@+id/regBar"
+        android:layout_alignLeft="@+id/regBar" />
+
+
+</RelativeLayout>
